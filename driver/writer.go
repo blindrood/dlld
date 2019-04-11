@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/lfdominguez/docker_log_driver_loki/bridge"
+	"github.com/blindrood/dlld/bridge"
 )
 
 type lokiMsg struct {
