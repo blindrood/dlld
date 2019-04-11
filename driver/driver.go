@@ -111,7 +111,6 @@ func (d *Driver) StartLogging(file string, logCtx logger.Info) error {
 		Docker_ServiceName:   extra["com.docker.swarm.service.name"],
 		Docker_ImageId:       logCtx.ImageFullID(),
 		Docker_ImageName:     logCtx.ImageName(),
-		Docker_Command:       logCtx.Command(),
 		Docker_Tag:           tag,
 		Host:          hostname,
 	}
