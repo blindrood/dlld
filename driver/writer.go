@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
+	"reflect"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/blindrood/dlld/bridge"
