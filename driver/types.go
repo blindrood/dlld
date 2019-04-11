@@ -11,7 +11,6 @@ type jsonLogLine struct {
 	Docker_ServiceName   string            `json:"service_name"`
 	Docker_ImageId       string            `json:"image_id"`
 	Docker_ImageName     string            `json:"image_name"`
-	Docker_Command       string            `json:"command"`
 	Docker_Tag           string            `json:"tag"`
 	Host          string            `json:"host"`
 	Timestamp     time.Time         `json:"timestamp"`
