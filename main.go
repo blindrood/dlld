@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/lfdominguez/docker_log_driver_loki/driver"
+	"github.com/blindrood/dlld/driver"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/go-plugins-helpers/sdk"
