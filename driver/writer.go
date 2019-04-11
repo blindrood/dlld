@@ -92,7 +92,8 @@ func logMessageToLoki(lp *logPair, message []byte) error {
 		if key == "Extra" || key == "Timestamp" {
 			continue
 		}
-
+		logrus.WithField("id", lp.info.ContainerID).Debug("Writing info about key %d", key)
+		logrus.WithField("id", lp.info.ContainerID).Debug(reflect.TypeOf(val))
 		var lineStr strings.Builder
 
 		lineStr.WriteString(key)
