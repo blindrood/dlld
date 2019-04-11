@@ -1,5 +1,5 @@
 # Plugin parameters
-PLUGIN_NAME=lfdominguez/docker-log-driver-loki
+PLUGIN_NAME=blindrood/dlld
 PLUGIN_TAG=latest
 
 all: clean docker rootfs create
