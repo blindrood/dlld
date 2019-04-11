@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"strings"
 	"time"
-	"reflect"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/blindrood/dlld/bridge"
@@ -90,11 +89,9 @@ func logMessageToLoki(lp *logPair, message []byte) error {
 	labels = labels[:0]
 
 	for key, val := range structs.Map(lp.logLine) {
-		if key == "Extra" || key == "Timestamp" {
+		if key== "Docker_StackName" || key == "Docker_ServiceName" || key == "Timestamp" {
 			continue
 		}
-		logrus.WithField("id", lp.info.ContainerID).Debug("Writing info about key %d", key)
-		logrus.WithField("id", lp.info.ContainerID).Debug(reflect.TypeOf(val))
 		var lineStr strings.Builder
 
 		lineStr.WriteString(key)
