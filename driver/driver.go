@@ -113,7 +113,6 @@ func (d *Driver) StartLogging(file string, logCtx logger.Info) error {
 		Docker_ImageName:     logCtx.ImageName(),
 		Docker_Command:       logCtx.Command(),
 		Docker_Tag:           tag,
-		Docker_Extra:         extra,
 		Host:          hostname,
 	}
 
