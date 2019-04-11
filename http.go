@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/lfdominguez/docker_log_driver_loki/driver"
+	"github.com/blindrood/dlld/driver"
 
 	"github.com/docker/docker/daemon/logger"
 	"github.com/docker/docker/pkg/ioutils"
