@@ -4,8 +4,6 @@
 ![](https://img.shields.io/github/license/blindrood/dlld.svg)
 ![](https://img.shields.io/github/downloads/blindrood/dlld/total.svg)
 ![](https://img.shields.io/github/release-date/blindrood/dlld.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/blindrood/dlld)](https://goreportcard.com/report/github.com/blindrood/dlld)
-[![Maintainability](https://api.codeclimate.com/v1/badges/52ca62a9438c4e97ac59/maintainability)](https://codeclimate.com/github/blindrood/dlld/maintainability)
 
 This project allow to send all Docker Logs to Grafana Loki Server.
 
