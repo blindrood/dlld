@@ -45,10 +45,10 @@ func extractMetadata(finalServiceName string, message []byte) map[string]interfa
 }
 
 func logMessageToLoki(lp *logPair, message []byte) error {
-	stackStrSize := len(lp.logLine.StackName)
+	stackStrSize := len(lp.logLine.Docker_StackName)
 
 	// Convert to Runes to avoid problems with multibytes (Unicode, UTF-8, UTF-16, etc) characters.
-	runes := []rune(lp.logLine.ServiceName)
+	runes := []rune(lp.logLine.Docker_ServiceName)
 
 	finalServiceName := runes[stackStrSize:]
 
@@ -89,10 +89,9 @@ func logMessageToLoki(lp *logPair, message []byte) error {
 	labels = labels[:0]
 
 	for key, val := range structs.Map(lp.logLine) {
-		if key == "Extra" || key == "Timestamp" {
+		if key== "Docker_StackName" || key == "Docker_ServiceName" || key == "Timestamp" {
 			continue
 		}
-
 		var lineStr strings.Builder
 
 		lineStr.WriteString(key)

@@ -1,7 +1,7 @@
 {
     "description": "Loki log driver",
-    "documentation": "https://github.com/lfdominguez/docker_log_driver_loki",
-    "entrypoint": ["/docker-loki-log-driver"],
+    "documentation": "https://github.com/blindrood/dlld",
+    "entrypoint": ["/dlld"],
     "network": {
       "type": "host"
     },

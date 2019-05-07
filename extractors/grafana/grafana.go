@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/lfdominguez/docker_log_driver_loki/bridge"
+	"github.com/blindrood/dlld/bridge"
 )
 
 type GrafanaAdapter struct{}

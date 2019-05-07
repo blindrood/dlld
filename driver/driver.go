@@ -107,9 +107,11 @@ func (d *Driver) StartLogging(file string, logCtx logger.Info) error {
 	logLine := jsonLogLine{
 		Docker_ContainerId:   logCtx.FullID(),
 		Docker_ContainerName: logCtx.Name(),
+		Docker_StackName:     extra["com.docker.stack.namespace"],
+		Docker_ServiceName:   extra["com.docker.swarm.service.name"],
 		Docker_ImageId:       logCtx.ImageFullID(),
 		Docker_ImageName:     logCtx.ImageName(),
-		Tag:           tag,
+		Docker_Tag:           tag,
 		Host:          hostname,
 	}
 
