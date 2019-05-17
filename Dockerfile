@@ -7,6 +7,12 @@ WORKDIR /go/src/github.com/blindrood/dlld
 COPY . /go/src/github.com/blindrood/dlld
 
 RUN go get -d -v ./...
+
+# bugfix
+WORKDIR /go/src/github.com/docker/go-connections
+RUN git checkout tags/v0.4.0
+WORKDIR /go/src/github.com/blindrood/dlld
+
 RUN go build --ldflags '-extldflags "-static"' -o /usr/bin/dlld
 RUN upx /usr/bin/dlld
 
