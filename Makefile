@@ -1,6 +1,6 @@
 # Plugin parameters
 PLUGIN_NAME=blindrood/dlld
-PLUGIN_TAG=latest
+PLUGIN_TAG=1.0.0
 
 all: clean docker rootfs create
 all-hub: clean rootfs-hub create enable
